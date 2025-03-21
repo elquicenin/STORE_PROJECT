@@ -1,0 +1,279 @@
+:root{
+    --primary-one:#9C27B0;
+    --dark--primary:#89119D;
+    --primary-950: #39a900;
+    --primary-800: #5dd12e;
+    --secundary-950: #50e5f9;
+    --secundary-2-950: #fdc600;
+    --white: #ffffff;
+    --black: #000000;
+    --gray: #626262;
+    --gray-550: #949494;
+    --gray-400: #92929292;
+    --gray-300: #ABABABAB;
+    --main-font: 'Staatliches', cursiva;
+    --font-size-h1-plus: 5rem;
+    --font-size-h1: 4rem;
+    --font-size-h2: 4.5rem;
+    --font-size-h3: 2.0rem;
+    --font-size-h4: 2rem;
+}
+html{
+    margin: 0;
+    font-size: 62.5%;/* Hack que permite trabajar con rem*/
+    box-sizing: border-box;
+
+}
+body{
+    font-size: 16px;
+    font-family: var(--main-font);
+    background: var(--primary-one);
+}
+a{
+    text-decoration: none;
+}
+p{
+    margin: 0 auto 1rem auto;
+    color: var(--white);
+    font-size: var(--font-size-h3);
+}
+.container{
+
+    max-width: 120rem;
+    margin: 0 auto;
+    
+}
+h1{
+    font-size: var(--font-size-h1);
+    color: var(--secundary-2-950);
+    margin: 2rem auto 0 auto;
+}
+header{
+    text-align: center;
+    color: var(--white);
+    /* line-height: 0.8; */
+}
+.navigation{
+    display: flex;
+    background: var(--dark--primary);
+    justify-content: center;
+    gap: 2rem;
+    font-size: var(--font-size-h2);
+}
+
+
+main{
+    color: var(--secundary-2-950);
+    text-align: center;
+}
+.main__name{
+    font-size: var(--font-size-h2);
+
+}
+
+.navigation__link{
+    color: var(--white);
+}
+
+.navigation__link--on,
+.navigation__link:hover{
+    color: var(--secundary-2-950);
+
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 2.2rem;
+}
+@media (min-width: 768px){
+        .grid{
+            grid-template-columns: repeat(3, 1fr);
+        }
+}
+.product{
+    padding: 1rem;
+    background: var(--dark--primary);
+
+}
+.information__product{
+    background: var(--dark--primary);
+}
+h2{
+    color: var(--white);
+}
+.product{
+
+
+}
+
+.product__img{
+    width: 100%;
+    
+}
+.product__name, .product__price{
+    font-size: var(--font-size-h2);
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.graphic{
+    min-height: 30rem;
+    grid-column: 1/3;
+}
+
+.graphic--shirt{
+    background-image:url(../img/grafico1.jpg);
+    grid-row: 2/3;
+    grid-column: 1/3;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.graphic--node{
+    background-image:url(/img/grafico2.jpg);
+    grid-row: 6/7;
+    grid-column: 2/4;
+    background-size: cover;
+    background-repeat: no-repeat; 
+
+}
+
+/* parte del about */
+
+.about{
+    display: grid;
+}
+@media(min-width: 768px)
+{
+    .about{
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 2.4rem;
+    }
+}
+
+.about__image{
+    grid-row: 1 / 2;
+}
+
+@media(min-width: 768px){
+    .about__image{
+        grid-column: 2 / 3;
+    }
+}
+
+.purchise-title{
+    font-size: var(--font-size-h2);
+    color: var(--white);
+
+}
+
+/* --------------------por que comprar con nosotros------------------------------- */
+.shoping-container{
+    text-align: center;
+
+}
+
+.purchise-title{
+
+}
+
+.blocks{
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+@media(min-width: 768px){
+    .blocks{
+        grid-template-columns: repeat(4 , 1fr);
+    }
+}
+
+.block-image{
+    width: 60%;
+}
+
+
+.block1{
+    
+
+}
+.block2{
+
+}
+.block3{
+
+}
+
+.block4{
+
+}
+
+.block-title{
+    color: var(--secundary-2-950);
+    margin-top: 0;
+
+}
+/* ------------------------------------------------------------------------------ */
+/* ---------------------------sesion de compra de producto----------------------- */
+
+.compra-producto{
+    width: auto;
+    display: grid;
+    column-gap: 2rem;
+}
+@media(min-width: 728px){
+    .compra-producto{
+        grid-template-columns: repeat(2,1fr);
+        padding: 0 20rem;
+    }
+}
+.form{
+
+    display: grid;
+    grid-template-columns: repeat(2/1fr);
+    gap: 2.4rem
+}
+.select-size{
+    width: 80%;
+    height: 4rem;
+    text-align: center;
+}
+
+.form__field{
+    font-size: var(--font-size-h3) solid;
+    border: 1rem solid var(--dark--primary);
+    font-family: sans-serif;
+    padding: 1.2rem;
+    /* width: 100%; */
+
+}
+
+
+.form__submit{
+    background: var(--secundary-2-950);
+    font-size: var(--font-size-h3) ;
+    font-family: sans-serif;
+    grid-column: 1/3;
+    padding: 1.5rem;
+    transition: 0.3s ease;
+    transition: font-size  0.3s ease;
+}
+
+.form__submit:hover{
+    background: var(--secundary-2-950);
+    font-size: 3rem;
+    cursor: pointer;
+}
+
+
+.footer__class{
+    background: var(--dark--primary);
+    text-align: center;
+    padding: 1rem;
+    color: var(--white);
+    margin: 1rem;
+
+
+
+}
